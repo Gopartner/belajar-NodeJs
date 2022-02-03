@@ -7,7 +7,7 @@ const rl = readline.createInterface({                           input: process.s
         output: process.stdout,                         })
 
 //Promise (tulis pertanyaan)
-const pertanyaan = (ques) => {                                return new Promise((resolve,reject) => {                    rl.question(ques,(n) => {
+const question = (ques) => {                                return new Promise((resolve,reject) => {                    rl.question(ques,(n) => {
             resolve(n)                                          })
     })                                                  }
 
@@ -25,5 +25,5 @@ const saveContact = (nama,email,hp) => {
 
 }
 
-export {pertanyaan,saveContact}
+export {question,saveContact}
 

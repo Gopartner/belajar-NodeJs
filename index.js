@@ -5,7 +5,7 @@ import chalk from 'chalk';
 import validator from 'validator';
 import Moment from 'moment';
 //destructering object
-import {pertanyaan,saveContact} from './component/saveContact.js';
+import {question,saveContact} from './component/saveContact.js';
 
 
 let log = console.log;
@@ -25,9 +25,9 @@ if(!fs.existsSync(fPath)){
 }
 
 const Main = async () => {
-    const nama = await pertanyaan('Full name :* ')
-    const email = await pertanyaan('Your email :* ')
-    const hp = await pertanyaan('Numer phone :* ')
+    const nama = await question('Full name :* ')
+    const email = await question('Your email :* ')
+    const hp = await question('Numer phone :* ')
 
     saveContact(nama,email,hp)
 
